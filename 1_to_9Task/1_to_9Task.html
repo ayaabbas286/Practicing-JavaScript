@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Scripts</title>
+  </head>
+  <body>
+    <h1 id="el">Elzero</h1>
+    <script>
+      //!Task 2
+      // Select the element with id "el"
+      document.getElementById("el").style.color = "blue";
+      document.getElementById("el").style.fontSize = "80px";
+      document.getElementById("el").style.fontWeight = "bold";
+      document.getElementById("el").style.textAlign = "center";
+      document.getElementById("el").style.fontFamily = "Arial";
+      //!Task 3
+      console.log(
+        "%cElzero %cweb %cschool",
+        "color: red ; font-size: 40px",
+        "color: green ; font-size: 40px; font-weight:bold;",
+        "color: white ; font-size: 40px; background-color:blue;"
+      );
+      //!Task 4
+      console.group("Group 1");
+      console.log("Massage One");
+      console.log("Massage two");
+      console.group("child Group");
+      console.log("Massage One");
+      console.log("Massage two");
+      console.group("Grand child Group");
+      console.log("Massage One");
+      console.log("Massage two");
+      console.groupEnd();
+      console.groupEnd();
+      console.groupEnd();
+      console.group("Group 2");
+      console.log("Massage One");
+      console.log("Massage two");
+      console.groupEnd();
+      console.groupEnd();
+      //!Task 5
+      console.table(["ُElzero", "Ahmed", "Sameh", "Gamal", "Aya"]);
+      //!Task 6
+      /*console.log("Iam In Console");
+       document.write("Iam In Page");*/
+    </script>
+  </body>
+</html>
