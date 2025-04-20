@@ -1,3 +1,14 @@
+//string challenge
+let TheTitle = "Elzero",
+  Des_Description = "Elzero Web School",
+  D_Date = "25/10";
+let MarkUp = `<div>
+  <h3>Hello ${TheTitle}</h3>
+<p>${Des_Description}</p>
+<span>${D_Date}</span>
+  </div>`;
+document.write(MarkUp.repeat(4));
+
 // Task one
 let numberOne = 10;
 let numberTwo = 20;
