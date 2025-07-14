@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>-86-to-093</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 500px;
+        margin: 20px auto;
+        border: 1px solid rgb(205, 237, 248);
+        box-shadow: 1px 2px 5px 1px rgb(202, 243, 245);
+        padding-top: 30px;
+        flex-wrap: wrap;
+      }
+      input,
+      select {
+        width: 250px;
+        padding: 5px 20px;
+        margin: 5px auto;
+        /* border-radius: 10px; */
+        outline: 0;
+        border-color: transparent transparent rgb(136, 221, 245) transparent;
+      }
+      input:focus {
+        border-color: transparent transparent rgb(0, 157, 224) transparent;
+      }
+      input[type="submit"] {
+        background-color: rgb(1, 102, 209);
+        color: white;
+        border-radius: 20px;
+        width: 100px;
+      }
+      input[type="submit"]:hover {
+        background-color: rgb(20, 131, 249);
+        color: white;
+        cursor: pointer;
+      }
+      .results {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        border: 1px solid black;
+        width: 80%;
+        height: 250px;
+        margin: 20px auto;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <input
+        type="number"
+        name="elements"
+        class="input"
+        placeholder="Number Of Elements"
+      />
+      <input
+        type="text"
+        name="texts"
+        class="input"
+        placeholder="Elements Text"
+      />
+      <select name="type" class="input">
+        <option value="Div">Div</option>
+        <option value="Section">Section</option>
+      </select>
+      <input type="submit" name="create" value="Create" />
+      <div class="results"></div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
