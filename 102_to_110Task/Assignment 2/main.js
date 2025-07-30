@@ -3,13 +3,13 @@ function CreatePopup() {
   let heading = document.createElement("h2");
   let subheading = document.createElement("p");
   let closeBtn = document.createElement("button");
-  let overlay = document.createElement("div")
+  let overlay = document.createElement("div");
 
   PopUp.className = "popup";
   heading.className = "heading";
   subheading.className = "subheading";
   closeBtn.className = "close";
-  overlay.className = "overlay"
+  overlay.className = "overlay";
 
   heading.innerText = "Welcome";
   subheading.innerText = "Welcome to Zero Webschool";
@@ -18,7 +18,7 @@ function CreatePopup() {
   PopUp.appendChild(heading);
   PopUp.appendChild(subheading);
   PopUp.appendChild(closeBtn);
-    document.body.appendChild(overlay);
+  document.body.appendChild(overlay);
   document.body.appendChild(PopUp);
 
   //close popup

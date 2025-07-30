@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>111 to 114</title>
+  </head>
+  <style>
+    /* form {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      height: 300px;
+      justify-content: center;
+      margin: 20px auto;
+      border: 1px solid rgb(162, 162, 255);
+      box-shadow: 1px 2px 2px 1px rgb(140, 140, 252);
+    }
+
+    input {
+      width: 70%;
+      margin: 10px auto;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid rgb(162, 162, 255);
+      outline: none;
+    }
+    input:focus {
+      border: 1px solid rgb(101, 101, 248);
+    }
+    input,
+    select {
+      flex: 1;
+    }
+    select {
+      margin: 10px auto;
+      width: 70.5%;
+      padding: 10px;
+      border: 1px solid rgb(162, 162, 255);
+      border-radius: 10px;
+
+      outline: none;
+    }
+    .inputs {
+      margin-left: 50px;
+    }
+    label {
+      font-weight: bold;
+      color: #333;
+      flex: 0 0 150px;
+
+      margin-right: 20px;
+    }
+    form button {
+      margin: 20px auto;
+      padding: 12px 24px;
+      background-color: #727cf5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #5a62d1;
+    } */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7ff;
+      padding: 40px;
+    }
+
+    form {
+      width: 600px;
+      margin: 0 auto;
+      padding: 50px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .inputs {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .inputs label {
+      flex: 0 0 150px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .inputs input,
+    .inputs select {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .inputs input:focus,
+    .inputs select:focus {
+      border-color: #727cf5;
+      box-shadow: 0 0 5px rgba(114, 124, 245, 0.3);
+      outline: none;
+    }
+
+    form button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 28px;
+      background-color: #727cf5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #5b62d1;
+    }
+    h2 {
+      /* padding: 20px; */
+    }
+  </style>
+  <body>
+    <form action="">
+      <h2 align="center">Registration</h2>
+      <div class="inputs">
+        <label for="name">UserName</label>
+        <input type="name" id="name" placeholder="Please enter your UserName" />
+      </div>
+      <div class="inputs">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Please enter your Age" />
+      </div>
+      <div class="inputs">
+        <label for="id">Id</label>
+        <input type="number" id="id" placeholder="Please enter your id" />
+      </div>
+      <div class="inputs">
+        <label for="country">Choose a country</label>
+        <select name="country" id="country">
+          <option value="eg">eg</option>
+          <option value="ksa">Ksa</option>
+          <option value="dubi">Dubi</option>
+          <option value="india">india</option>
+          <option value="palastina">palastina</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

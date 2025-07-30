@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-8,200..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lemonada:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .target {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      label {
+        margin: 20px 10px;
+      }
+      #fonts,
+      #fonts-size,
+      #colors {
+        width: 100px;
+        padding: 5px;
+      }
+      .target {
+        width: 400px;
+        height: 200px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- fonts -->
+      <label for="fonts">Choose font</label>
+      <select id="fonts" name="fonts">
+        <option value="Open" selected>Open</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Roboto">Roboto</option>
+      </select>
+      <!-- font color -->
+      <label for="colors">Choose color</label>
+      <select id="colors" name="colors">
+        <option value="blue" selected>blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="grey">grey</option>
+        <option value="pink">pink</option>
+        <option value="orange">orange</option>
+      </select>
+
+      <!-- font size -->
+      <label for="fonts-size">Choose font size</label>
+      <select id="fonts-size" name="fonts-size">
+        <option value="16" selected>16</option>
+        <option value="20">20</option>
+        <option value="24">24</option>
+        <option value="28">28</option>
+        <option value="30">30</option>
+      </select>
+    </div>
+    <div class="target">This a Text</div>
+    <script src="main.js"></script>
+  </body>
+</html>
