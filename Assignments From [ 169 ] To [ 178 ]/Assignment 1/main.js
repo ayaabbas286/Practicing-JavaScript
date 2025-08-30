@@ -1,20 +1,37 @@
-let dateNow = new Date();
-let birthday = new Date("31 march 1998");
-let MyAge = dateNow - birthday;
-let seconds = MyAge / 1000;
-let Minutes = seconds / 60;
-let hours = Minutes / 60;
-let days = hours / 24;
-let Months = days / 30;
-let years = Months / 12;
+let MyData = document.getElementById("data");
+let MyRequest = new XMLHttpRequest();
 
-console.log(years);
+MyRequest.open("GET", "articles.json");
 
-// Needed Output
+console.log(MyRequest);
 
-// "1247939400 Seconds"
-// "20798990 Minutes"
-// "346650 Hours"
-// "14444 Days"
-// "481 Months"
-// "40 Years"
+MyRequest.onreadystatechange = function () {
+  let AddData = "";
+  if (this.readyState === 4 && this.status === 200) {
+    let mainData = JSON.parse(this.responseText);
+    for (let i = 0; i < mainData.length; i++) {
+      mainData[i].category = "All";
+    }
+
+    console.log(mainData);
+
+    console.log("Data Updated");
+    let updatedData = JSON.stringify(mainData);
+    console.log(updatedData);
+    console.log("Data Loaded in json");
+    for (let i = 0; i < mainData.length; i++) {
+      AddData += `<div>
+    <h2>${mainData[i].address}</h2>
+    <p>${i + 1}</p>
+    <p>${mainData[i].Author}</p>
+    <p>${mainData[i].category}</p>
+  </div>`;
+    }
+    MyData.innerHTML = AddData;
+    MyData.style.display = "flex";
+    MyData.style.marginLeft = "100px";
+  } else {
+    console.log(this.status);
+  }
+};
+MyRequest.send();

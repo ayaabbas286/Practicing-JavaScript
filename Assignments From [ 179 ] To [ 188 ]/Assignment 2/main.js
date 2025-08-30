@@ -1,8 +1,20 @@
-// Needed Output
-// "Tue Jan 01 1980 00:00:01 GMT+0200 (Eastern European Standard Time)"
-
-let _Date = new Date(0);
-_Date.setHours(0);
-_Date.setFullYear(1980);
-_Date.setSeconds(1);
-console.log(_Date);
+fetch("Data.json")
+  .then((res) => {
+    console.log(res);
+    let myData = res.json();
+    console.log(myData);
+    return myData;
+  })
+  .then((res) => {
+    res.length = 5;
+    console.log(res);
+    let Div = document.querySelector(".container");
+    let content = "";
+    for (let i = 0; i < res.length; i++) {
+      content += `<div>
+        <h3>${res[i].title}</h3>
+        <p>${res[i].description}</p>
+      </div>`;
+    }
+    Div.innerHTML = content;
+  });
